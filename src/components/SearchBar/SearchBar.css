@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-image: url('./background_search_desktop.jpg');
+    background-image: url('https://res.cloudinary.com/cldean11/image/upload/v1574718352/Yelp-App/background_search_desktop_cz4qgr.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     height: 25rem;
@@ -77,7 +77,7 @@
   
   @media only screen and (max-width: 560px) {
     .SearchBar {
-      background-image: url('./background_search_mobile.jpg');
+      background-image: url('https://res.cloudinary.com/cldean11/image/upload/v1574718354/Yelp-App/background_search_mobile_xkeaza.jpg');
     }
   
     .SearchBar-sort-options ul {

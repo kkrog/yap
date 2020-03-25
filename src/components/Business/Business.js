@@ -12,6 +12,7 @@ let business = {
 };
 class Business extends React.Component{
     render(){
+        return(
         <div className="Business">
             <div className="image-container">
                 <img src='https://s3.amazonaws.com/codecademy-content/programs/react/ravenous/pizza.jpg' alt=''/>
@@ -29,7 +30,7 @@ class Business extends React.Component{
                     <p>90 reviews</p>
                 </div>
             </div>
-        </div>
+        </div>)
     }
 };
 export default Business;
