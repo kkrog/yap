@@ -3,27 +3,7 @@ import './App.css';
 import BusinessList from './components/BusinessList/BusinessList.js';
 import SearchBar from './components/SearchBar/SearchBar.js';
 import Yelp from './util/Yelp';
-
-/*let business = {
-  imageSrc: 'https://s3.amazonaws.com/codecademy-content/programs/react/ravenous/pizza.jpg',
-  name: 'MarginOtto Pizzeria',
-  address: '1010 Paddington Way',
-  city: 'Flavortown',
-  state: 'NY',
-  zipCode: '10101',
-  category: 'Italian',
-  rating: 4.5,
-  reviewCount: 90   
-};
-
-let businesses=[
-  business,
-  business,
-  business,
-  business,
-  business,
-  business
-]*/
+import logo from './bowlIcon.png';
 
 class App extends React.Component{
   constructor(props){
@@ -44,17 +24,15 @@ class App extends React.Component{
   render(){
     return (
       <div className="App">
-        <h1>My Yapp</h1>
+        <div id="titleWrap">
+          <img src={logo} alt="bowl/eyeglass Chow Scout logo"/>
+          <h1 id="title">Chow Scout</h1>
+        </div>
         <SearchBar searchYelp={this.searchYelp}/>
         <BusinessList businesses={this.state.businesses} />
       </div>
     )
   }
 };
-/*function App() {
-  return (
-   
-  );
-}
-*/
+
 export default App;

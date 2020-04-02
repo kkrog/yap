@@ -2,24 +2,26 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-image: url('https://res.cloudinary.com/cldean11/image/upload/v1574718352/Yelp-App/background_search_desktop_cz4qgr.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 25rem;
+    background-image: url('./foodbg.png');
+    background-size: contain;
+    background-repeat: repeat;
+    height: 16rem;
   }
-  
+
   .SearchBar-sort-options ul {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
     margin-bottom: 2.22rem;
     color: #ffffff;
+    background-color: #c0336f;
+    padding: .5rem;
+    list-style-type: none;
   }
   
   .SearchBar-sort-options li {
     cursor: pointer;
-    width: 4.33rem;
-    border-bottom: 1px solid #fff;
-    padding: 0 2.58rem .33rem 2.58rem;
+    width: 4rem;
     line-height: 1.13;
     text-align: center;
     font-weight: 600;
@@ -28,13 +30,12 @@
   }
   
   .SearchBar-sort-options li:hover {
-    color: #d4cfcf;
+    color: #ffafd6;
   }
   
   .SearchBar-sort-options li.active,
   .SearchBar-sort-options li.active:hover {
-    border-bottom: 1px solid #f0c36c;
-    color: #f0c36c;
+    color: #b4cc35;
   }
   
   .SearchBar-fields {
@@ -51,6 +52,7 @@
     border-radius: 4px;
     font-size: .77rem;
     font-weight: 500;
+    border: 1px solid #c0336f;
   }
   
   .SearchBar-fields input:last-child {
@@ -59,32 +61,37 @@
   
   .SearchBar-submit {
     text-align: center;
+    margin-bottom: 1rem;
   }
   
   .SearchBar-submit a {
     border-radius: 4px;
     padding: .72rem 1.7rem;
-    background-color: #cca353;
+    background-color: #faa73e;
     color: #ffffff;
     font-weight: 600;
     transition: background-color .5s;
+    text-decoration: none;
   }
   
   .SearchBar-submit a:hover {
     cursor: pointer;
-    background-color: #a7874b;
+    background-color: #f7942e;
+    text-decoration: underline;
   }
   
-  @media only screen and (max-width: 560px) {
-    .SearchBar {
-      background-image: url('https://res.cloudinary.com/cldean11/image/upload/v1574718354/Yelp-App/background_search_mobile_xkeaza.jpg');
-    }
-  
-    .SearchBar-sort-options ul {
-      margin-left: 2rem;
-      margin-right: 2rem;
-    }
-  
+@media only screen and (max-width: 560px) {
+  .SearchBar{
+    height:19rem;
+    width: 100vw;
+    overflow-x: hidden;
+  }
+  .SearchBar-sort-options{
+    width:100%;
+  }
+  .SearchBar-sort-options ul{
+    max-width: 100%;
+  }
     .SearchBar-fields {
       flex-direction: column;
       align-items: center;
@@ -95,3 +102,9 @@
       margin-bottom: .86rem;
     }
   }
+@media only screen and (min-width: 1150px){
+  .SearchBar-sort-options ul{
+    padding-left: 25vw;
+    padding-right: 25vw;
+  }
+}
